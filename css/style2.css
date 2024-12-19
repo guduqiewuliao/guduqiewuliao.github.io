@@ -1,0 +1,206 @@
+/* 清除所有元素默认的内、外边距 */
+*{padding: 0px;margin: 0px;}
+
+/* 设置背景色以及页面大小 */
+body{background-color: rgb(255, 255, 153);height: 300vh;max-width: 1920px;min-width: 1440px;margin: 0 auto;}
+
+/* 文本 */
+*{font-family:"华文行楷",sans-serif;color:hsl(150, 40%, 25%);list-style-type: none;}
+p{text-indent: 2rem;}
+
+/* 顶部广告 */
+#top-advert{height: 25vh;}
+#top-advert a img{display: flex;flex-flow: row nowrap;height: 100%;width: 100%;}
+
+/* 搜索栏和导航菜单 */
+#stick{height: 30vh;}
+/* 页眉和导航菜单黏性定位,位于页面顶部 */
+#sticky{position: sticky;top: 0;z-index: 100;width: 100%;}
+/* 设置.full-width元素整个宽度背景颜色 */
+.full-width{background-color: hsl(85, 60%, 60%);}
+/* 站内搜索外观 */
+#search form{display: flex;flex-flow: row nowrap;height: 100%;justify-content: center;align-items: center;}
+#search input[type="search"]{width: 100%;}
+#search input[type="search"]{background-color: hsl(0, 100%, 100%);font-size: 3rem;border: 1px solid hsl(0, 100%, 100%);height: 40%;}
+#search input[type="submit"]{background-color: hsl(200, 55%, 50%);font-size: 3rem;border: 1px solid hsl(0, 100%, 100%);padding: 0 18px;color: hsl(40, 95%, 70%);height: 40%;}
+/* 页眉采用网络布局,网络模板区域定位,站内搜索占3列 */
+#page-top{display: grid;grid-template-columns: repeat(5,1fr);grid-template-rows: 15vh;grid-template-areas: "lg sr sr sr cr";}
+/* 图标1网格项目内容居中 */
+#tb1{justify-self: center;align-self: center;grid-area: lg;}
+/* 站内搜索网格项目内容居中 */
+#search{justify-self: center;align-self: center;grid-area: sr;}
+/* 图标2网格项目内容居中 */
+#tb2{justify-self: center;align-self: center;grid-area: cr;}
+/* 导航菜单 */
+nav{border-bottom: 1px solid hsl(0,50%,50);border-top: 1px solid hsl(85, 60%, 60%);}
+nav{background-color: hsl(200, 80%, 50%);height: 15vh;}
+/* 导航菜单背景过渡 */
+nav ul a{transition: background-color 0.5s linear;}
+/* 水平菜单 */
+nav ul {display: flex;flex-flow: row wrap;}
+/* 每行四个菜单项宽度各占25% */
+nav ul li{width: 25%;height: 7.5vh;}
+nav ul a{height: 3.75vh;display: flex;align-items: center;justify-content: center;text-decoration: none;font-size: 200%;font-weight: normal;margin: 0 1px;padding: 5% 0;}
+nav ul a:hover{background-color: hsl(16, 55%, 50%);color: hsl(0, 0%, 100%);}
+
+/* 主体 */
+main{display: grid;height: 195vh;width: 100%;}
+
+/* 内容头部采用网络布局,网络模板区域定位 */
+main header{height: 65vh;display: grid;grid-template-columns: repeat(3,1fr);grid-template-rows: 65vh;grid-template-areas: "lg sr cr";}
+/* 轮转图片 */
+#banner{height: 100%;justify-self: center;align-self: center;grid-area: lg;}
+#banner{background-color: hsla(85, 60%,60%,0.1);}
+#banner dl{display: flex;flex-flow: column;height: 100%;}
+#banner dt{display: flex;justify-content: center;align-items: center;order: 1;}
+#banner dt a{display: flex;justify-content: center;align-items: center;width: 50px;height: 50px;border-radius: 50%;padding: 0 0 1px 0;margin: 0 5px;background-color: hsl(200, 55%, 50%);color: hsl(0, 0%, 100%);text-decoration: none;font-size: 2rem;}
+#banner dd a img{display: flex;flex-flow: row nowrap;width: 100%;height: 60vh;}
+/* 新闻 */
+#newspaper{justify-self: center;align-self: center;grid-area: sr;height: 65vh;width: auto;}
+#newspaper h3{font-family: "宋体"; font-size: 750%;padding-bottom: 0.5em;text-align: center;}
+#newspaper div{padding-left: 4px;}
+#newspaper div h4{font-size: 400%;padding-bottom: 0.5em;text-align: center;}
+#newspaper div ul li{font-size: 155%;padding-bottom: 0.5em;}
+/* 登录界面 */
+#user{justify-self: center;align-self: center;grid-area: cr;}
+#user h3{font-family: "宋体"; font-size: 600%;padding-bottom: 0.5em;text-align: center;}
+#user div form {height: 25vh;}
+.userName span{font-size: 250%;}
+.userName input{width: 50%;height: 3vh;}
+.password span{font-size: 250%;}
+.password input{width: 50%;height: 3vh;}
+.login_btn a input{width: 50%;height: 3vh;}
+.login_btn{text-align: center;padding-top: 5px;}
+.login_btn a input[value]{font-size: 200%;}
+.forgot_password{text-align: center;font-size: 150%;}
+
+/* 主要内容采用网络布局,网络模板区域定位 */
+main #main-content{height: 130vh;display: grid;grid-template-columns: 7fr 3fr;grid-template-rows: 130vh;grid-template-areas: "lg cr";}
+/* 内容左侧 */
+#main-content-left h2{
+    font-size: 100px;
+    text-align: center;
+}
+#main-content-left p{
+    font-size: 50px;
+    text-indent: 2em;
+}
+#main-content-left img{
+    width: 500px;
+    height: 400px;
+    padding: 10px 400px 10px 400px;
+}
+
+/* 侧栏 */
+main #main-content aside{height: 100%;justify-self: center;align-self: center;grid-area: cr;}
+main #main-content aside{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+}
+/* 疾病分类 */
+#jbfl{
+    display: grid;
+}
+#jbfl div ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-size: 20px;
+    text-align: center;
+}
+#jbfl h3{
+    font-size: 25px;
+    text-align: center;
+}
+/* 疑难杂症 */
+#ynzz{
+    display: grid;
+}
+#ynzz div ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-size: 20px;
+    text-align: center;
+}
+#ynzz h3{
+    font-size: 25px;
+    text-align: center;
+}
+/* 民族医药 */
+#mzyy{
+    display: grid;
+}
+#mzyy div ul{
+    display: grid;
+    font-size: 20px;
+    text-align: center;
+}
+#mzyy h3{
+    font-size: 25px;
+    text-align: center;
+}
+/* 关于网站 */
+#gywz{
+    display: grid;
+    height: 450px;
+}
+#gywz div{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    font-size: 20px;
+    text-align: center;
+    height: 395px;
+}
+#gywz h3{
+    font-size: 25px;
+    text-align: center;
+}
+#gywz div img{
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+#kong{
+    height: 30px;
+}
+
+/* 友情链接 */
+#friend{
+    display: grid;
+    font-size: 20px;
+}
+#friend div{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+#friend a {
+    text-decoration: none;
+    margin: 0 5px;
+    color: #000;
+}
+
+.yqlj {
+    color: #900;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#friend a:hover {
+    color: #f60;
+    text-decoration: underline;
+}
+
+#friend p {
+    margin: 10px 0 10px 0;
+}
+
+/* 版权信息 */
+#copyright{
+    text-align: center;
+    font-size: 20px;
+}
+
+/* 时间 */
+#clock{
+    font-size: 20px;
+    text-align: center;
+}
